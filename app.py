@@ -33,10 +33,10 @@ import pickle
 
 
 mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="",
-  database="phishing"
+ host="remotemysql.com",
+  user="MKnq4tnVGc",
+  password="GmiR1Xo6G2",
+  database="MKnq4tnVGc"
 )
 
 mycursor = mydb.cursor(buffered=True)
