@@ -1,0 +1,134 @@
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Phishing Url Detection</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static',filename='assets1/images/logo/favicon.png') }}" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets1/css/animate-3.7.0.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets1/css/font-awesome-4.7.0.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets1/fonts/flat-icon/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets1/css/bootstrap-4.1.3.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets1/css/owl-carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets1/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets1/css/style.css') }}">
+</head>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+    <header class="header-area single-page">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo-area">
+                            <a href="home.html"><img src="{{ url_for('static',filename='assets1/images/logo.png') }}" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="custom-navbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>  
+                        <div class="main-menu main-menu-light">
+                            <ul>
+                              <li class="active"><a href="../home">home</a></li>
+                               
+                               
+                                
+                                <li><a href="../contact">contact</a></li>
+                                
+                          {% block navbar %}
+                        {% if login %}
+                         <li class="menu-btn">
+                            <a class="login" href="../dashboard">Dashboard</a>
+                         <a class="template-btn" href="dashboard/logout">Logout</a>
+                     </li>
+                        {% else %}
+                          <li class="menu-btn">
+                                <a href="../login" class="login">log in</a>
+                                <a href="../signup" class="signup">sign up</a>
+                               
+                            </li>
+                        {% endif %}
+                        {% endblock navbar %}
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <!-- Header Area End -->
+ <br>
+    <br>
+    <br>
+    <br>
+    
+<div class="pagenotfound">
+        <div class="container">
+            <div class="content">
+                <h2 class="text-center">Aww... Don't Worry.</h2>
+                <p class="text-center" style="font-size:55px;">It's just a 404 Error!</p>
+                <p class="text-center" style="font-size:23px;">What you're looking for may have been misplaced in our Memory. <br>We will work on that.</p>
+            </div>
+        </div>
+    </div>
+ <footer style="
+    padding-bottom: 51px;
+    padding-top: 2px;
+" class="footer-area section-padding">
+           
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-6">
+                            <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank"></a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</span>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="social-icons">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+   <script src="{{ url_for('static', filename='assets1/js/vendor/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets1/js/vendor/bootstrap-4.1.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets1/js/vendor/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets1/js/vendor/owl-carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets1/js/vendor/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets1/js/vendor/ion.rangeSlider.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets1/js/main.js') }}"></script>
+</body>
+</html>
+{% endblock %}

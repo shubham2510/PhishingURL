@@ -1,0 +1,114 @@
+.home {
+  color:#313437;
+  background-color:#fff;
+  padding:50px 0;
+}
+
+.home p {
+  color:#7d8285;
+  line-height:1.5;
+}
+
+.home h2 {
+  font-size:32px;
+  font-weight:bold;
+  margin-bottom:25px;
+  line-height:1.5;
+  padding-top:0;
+  margin-top:0;
+  color:inherit;
+}
+
+.home .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto 25px;
+}
+
+.home .intro p {
+  margin-bottom:35px;
+}
+
+.home form {
+  justify-content:center;
+}
+
+.home form .form-control {
+  background:#eff1f4;
+  border:none;
+  border-radius:3px;
+  box-shadow:none;
+  outline:none;
+  color:inherit;
+  text-indent:9px;
+  height:45px;
+  margin-right:10px;
+  min-width:250px;
+}
+
+.home form .btn {
+  padding:6px 8px;
+  border:none;
+  background:none;
+  box-shadow:none;
+  text-shadow:none;
+  opacity:0.9;
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:0.4px;
+  line-height:1;
+}
+
+.home form .mic {
+  padding:6px 8px;
+  border:none;
+  background:none;
+  box-shadow:none;
+  text-shadow:none;
+  opacity:0.9;
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:0.4px;
+  line-height:1;
+  margin-right:10px;
+}
+
+.home form .btn:hover {
+  opacity:1;
+}
+
+.home form .mic:hover {
+  opacity:1;
+  cursor: pointer;
+}
+
+.home form .btn:active {
+  transform:translateY(1px);
+}
+
+.home form .fa-microphone {
+  color:inherit;
+  font-size:28px;
+}
+
+.home form .fa-search {
+  color:#055ada;
+  font-size:28px;
+}
+
+.home form .btn-mic {
+  color:#055ada;
+  outline:none !important;
+}
+
+.home form .btn-search {
+  color:#055ada;
+  outline:none !important;
+}
+
+.home .result {
+  font-size:22px;
+  max-width:840px;
+  margin:0 auto 25px;
+  padding-top: 35px;
+}

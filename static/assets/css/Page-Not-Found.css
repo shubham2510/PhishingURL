@@ -1,0 +1,27 @@
+.pagenotfound {
+  color:#313437;
+  background-color:#fff;
+  padding:50px 0;
+}
+
+.pagenotfound p {
+  color:#7d8285;
+}
+
+.pagenotfound h2 {
+  font-family:Acme, sans-serif;
+  font-size:57px;
+  font-weight:bold;
+  margin-bottom:25px;
+  line-height:1.5;
+  padding-top:0;
+  margin-top:0;
+  color:inherit;
+}
+
+.pagenotfound .content {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto 25px;
+}
+

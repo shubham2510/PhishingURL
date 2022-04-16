@@ -1,0 +1,111 @@
+{% extends 'dashboard/layout.html' %}
+{% block dashboard %}
+
+<div class="container rummage-profile">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <!-- <strong>Title</strong> --> {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+               
+              
+                <div class="row">
+                    
+                    <div class="col-md-12">
+                        <div class="tab-content profile-tab text-center" id="myTabContent">
+                            <div style="text-align: justify;" class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                 <h3 style="text-align: justify;" >User Details</h3>
+                                 <br>
+                                        <div  class="row">
+
+                                            <div class="col-md-6">
+                                                
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{uid}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{name}}</p>
+                                            </div>
+                                        </div>
+                               
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Mobile</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{mobile}}</p>
+                                            </div>
+                                        </div>
+
+                                    
+
+
+
+
+
+
+                                     
+                                            <Br>
+ <h3 style="text-align: justify;" >Phishing Site That You Checked At Last:- </h3>
+<br><br>
+
+  <!-- <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Your Sugar Level</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{glucose}}</p>
+                                            </div>
+
+
+                                        </div> -->
+                                       {% if predict %}
+                          <div class="row">
+                                            
+                                            <div class="col-md-12">
+                                                <p><span style="color:black;">URL:-</span><a href="{{url}}">{{url}}</a> </p>
+                                                <p><span style="color:black;">Status:-</span>Safe</p>
+                                            </div>
+
+
+                                        </div> 
+                                     {% else %}
+                             <div class="row">
+                                            
+                                               <div class="col-md-12">
+                                                <p><span style="color:black;">URL:-</span><a href="{{url}}">{{url}}</a> </p>
+                                                <p><span style="color:black;">Status:-</span>Unsafe</p>
+                                            </div>
+
+
+                                        </div> 
+                                         
+                                         {% endif %}
+                                     
+                                  
+                                   
+        
+<br>
+                                     
+                                
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+{% endblock %}
